@@ -18,7 +18,13 @@ case "$1" in
    	   export PATH=$PATH:$(pwd)
 	   echo "Repozytorium sklonowane, PATH zaktualizowany."
 	  ;;
-
+	--error | -e)
+	   count=${2-100}
+	   for i in $(seq 1 $count); do
+	     mkdir -p "error${i}"
+	     echo "Error w pliku ${i}" > "error${i}/error${i}.txt"
+	   done
+	  ;;
 
 
 esac
