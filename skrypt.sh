@@ -13,5 +13,13 @@ case "$1" in
 	--help | -h)
 	   echo "Opcje: --date (-d), --logs  (-l), --help (-h), --init, --error (-e)"
 	  ;;
+	--init)
+	   git clone https://github.com/JM8932/Lab4_Narz-dzia_w-bran-y_IT.git
+   	   export PATH=$PATH:$(pwd)
+	   echo "Repozytorium sklonowane, PATH zaktualizowany."
+	  ;;
+
+
+
 esac
 
